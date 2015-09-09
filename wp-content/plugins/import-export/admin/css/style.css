@@ -1,0 +1,9 @@
+.import_export label {
+    float: left;
+    font-size: 15px;
+    width: 22% !important;
+}
+.button_sumbit p {
+    float: left;
+    margin-right: 3px;
+}
