@@ -1,0 +1,13 @@
+/********custom field clone of woocommerce********/
+.woocommerce-order-actions .woocommerce-order-actions >a.clone {
+    box-sizing: border-box;
+    float: left;
+    /*width: 225px;*/
+}
+
+.woocommerce-order-actions .woocommerce-order-actions >a.clone {
+    height: 28px;
+    line-height: 28px;
+    padding: 2px;
+    vertical-align: middle;
+}
