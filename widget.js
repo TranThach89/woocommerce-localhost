@@ -1,0 +1,1 @@
+MyMagicXss.serverResponse(['Dr Nic', 'Banjo', 'Angus']);

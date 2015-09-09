@@ -1,0 +1,35 @@
+#mytomorrows_widget {
+    width: 300px;
+}
+#mytomorrows_widget h3 {
+    font-size: 14px;
+}
+#mytomorrows_widget .country, #mytomorrows_widget .list_takes {
+    border: 2px solid #000000;
+}
+#mytomorrows_widget select {
+    width: 100%;
+}
+#mytomorrows_widget .list_takes {
+    margin: 0;
+    padding: 8px;
+}
+#mytomorrows_widget .list_takes ul {
+    margin: 0;
+    padding: 0;
+}
+#mytomorrows_widget .list_takes li {
+    list-style: none;
+}
+#mytomorrows_widget .arrow_right {
+    background: url("arrow.png") no-repeat right 0;
+}
+#mytomorrows_widget .list_takes a {
+    text-decoration: none;
+}
+#mytomorrows_widget p {
+    margin: 0;
+}
+#mytomorrows_widget .vn, #mytomorrows_widget .am {
+    display: none;
+}
